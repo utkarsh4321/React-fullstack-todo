@@ -1,0 +1,26 @@
+.edit__todo {
+  transform: translateX(94px);
+  transition: transform 200ms ease;
+}
+.todo__list {
+  overflow: hidden;
+}
+.todo__list:hover .edit__todo {
+  transform: translateX(0px);
+}
+.add__btn {
+  position: relative;
+  left: 0;
+  transition: left 0.2s ease-in, transform 0.3s ease-in-out;
+}
+.btn-active {
+  transform: rotate(45deg);
+  left: auto;
+}
+
+@media (min-width: 640px) {
+  .today {
+    position: relative;
+    top: 21px;
+  }
+}

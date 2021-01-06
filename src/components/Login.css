@@ -1,0 +1,23 @@
+.formControl {
+  @apply rounded-md;
+  @apply mb-6;
+  @apply py-4;
+  @apply px-3;
+}
+.formControl:focus {
+  @apply outline-none;
+}
+.btn-submit {
+  @apply flex w-full bg-gray-800 text-white items-center justify-center p-3 rounded-md mt-4 text-2xl font-bold;
+}
+.btn-submit:focus {
+  @apply outline-none;
+}
+.todo-input {
+  @apply py-2 px-3 border border-transparent rounded;
+}
+.todo-input:focus {
+  @apply outline-none border-blue-400;
+}
+
+
