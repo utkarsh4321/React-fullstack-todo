@@ -1,0 +1,29 @@
+.todo__form {
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: center bottom;
+  height: max-content;
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+  will-change: opacity, transform, visibility;
+  transform: translateY(30px);
+  position: relative;
+}
+.form__active {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+  will-change: opacity, transform, visibility;
+}
+.overflow-div {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s opacity ease, 0.2s visibility ease;
+  will-change: visibility, opacity;
+}
+.overflow-div.open {
+  opacity: 1;
+  visibility: visible;
+  will-change: visibility, opacity;
+}

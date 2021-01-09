@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import Moon from "../assets/moon.svg";
-import UserImg from "../assets/user.svg";
+
 import { ThemeContext } from "../context/themeContext";
 
 const Navbar = () => {

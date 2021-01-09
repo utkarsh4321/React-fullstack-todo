@@ -1,9 +1,19 @@
 import React from "react";
-
-function Modal() {
+import "./Modal.css";
+function Modal({ openModal, op }) {
   return (
-    <div className="overflow-div fixed inset-0 bg-black bg-opacity-75 z-10 flex justify-center items-center">
-      <div className="todo__form flex flex-col w-96 lg:w-1/4 md:max-w-4xl todo__form--content px-3 py-4 rounded text-current dark:bg-gray-700 bg-gray-200 z-10">
+    <div
+      className={`overflow-div fixed inset-0 bg-black bg-opacity-75 z-10 flex justify-center items-center ${
+        op ? "open" : ""
+      }`}
+      onClick={openModal}
+    >
+      <div
+        className={`todo__form flex flex-col w-96 lg:w-1/4 md:max-w-4xl todo__form--content px-3 py-4 rounded text-current dark:bg-gray-700 bg-gray-200 z-10 ${
+          op ? "form__active" : ""
+        }`}
+        onClick={(e) => e.stopPropagation()}
+      >
         <input
           type="text"
           placeholder="Your todo"
