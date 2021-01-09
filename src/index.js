@@ -2,13 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { ThemeProvider } from "./context/themeContext";
+// import Background from "./layout/Background";
 // import { GlobalStyles } from "twin.macro";
 
 // import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
