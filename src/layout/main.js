@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Modal from "../components/BaseCompenents/Modal";
+// import Modal from "../components/BaseCompenents/Modal";
 import Login from "../components/Login";
 import Navbar from "../components/Navbar";
 import Signup from "../components/Signup";
