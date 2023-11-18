@@ -31,6 +31,8 @@ jobs:
     - run: npm run build --if-present
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v2
+      with:
+          path: ./build
        
   deploy:
     needs: build
