@@ -12,11 +12,11 @@ on:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.20.0]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,7 +26,28 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: rm -rf package-lock.json
-    - run: npm i
+    # - run: rm -rf package-lock.json
+    - run: npm i --legacy-peer-deps
     - run: npm run build --if-present
-    - run: pm2 restart my-todo
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+          path: ./build
+       
+  deploy:
+    needs: build
+     # Deploy to the github-pages environment
+    permissions:
+        pages: write      # to deploy to Pages
+        id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+    
