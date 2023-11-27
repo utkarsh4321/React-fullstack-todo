@@ -16,7 +16,7 @@ const Navbar = () => {
     <header className="flex-shrink-0">
       <div className="p-5 flex justify-between align-center">
         <h1 className="text-2xl font-weight-semibold dark:text-darkSecondary">
-          Todo
+          Takatora
         </h1>
 
         <div className="flex">
