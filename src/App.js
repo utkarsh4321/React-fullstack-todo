@@ -9,7 +9,7 @@ function App() {
   }, []);
   return (
     <div className="w-full h-full dark:bg-gray-900 dark:text-white font-body bg-gray-300 text-gray-800">
-    <h1>Hello world</h1>
+    <h1>Don't know about it</h1>
       <Main />
     </div>
   );
