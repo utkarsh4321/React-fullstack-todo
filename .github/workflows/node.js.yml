@@ -29,25 +29,25 @@ jobs:
     # - run: rm -rf package-lock.json
     - run: npm i --legacy-peer-deps
     - run: npm run build --if-present
-    - name: Upload Pages artifact
-      uses: actions/upload-pages-artifact@v2
-      with:
-          path: ./build
+    # - name: Upload Pages artifact
+    #   uses: actions/upload-pages-artifact@v2
+    #   with:
+    #       path: ./build
        
-  deploy:
-    needs: build
-     # Deploy to the github-pages environment
-    permissions:
-        pages: write      # to deploy to Pages
-        id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # deploy:
+  #   needs: build
+  #    # Deploy to the github-pages environment
+  #   permissions:
+  #       pages: write      # to deploy to Pages
+  #       id-token: write
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
 
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+  #   # Specify runner + deployment step
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v2
     
