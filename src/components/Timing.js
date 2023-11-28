@@ -1,6 +1,7 @@
 import React from "react";
 
 function Timing() {
+  console.log('timing component');
   return (
     <div className="md:text-2xl dark:text-gray-400">
       <div className="inline">Today</div>
