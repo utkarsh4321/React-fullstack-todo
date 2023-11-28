@@ -18,7 +18,6 @@ const getInitialTheme = () => {
 
 export const ThemeProvider = ({ initialState, children }) => {
   const [theme, setTheme] = useState(getInitialTheme);
-  console.log(theme, "dgdf");
   const rawSetTheme = (currentTheme) => {
     const root = window.document.documentElement;
     const isDark = currentTheme === "dark";
