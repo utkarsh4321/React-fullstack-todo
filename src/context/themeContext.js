@@ -3,6 +3,7 @@ import React, { createContext, useState, useEffect } from "react";
 export const ThemeContext = createContext();
 
 const getInitialTheme = () => {
+  console.log('Dark theme toggler');
   if (typeof window !== "undefined" && window.localStorage) {
     if (
       window.localStorage.theme === "dark" ||
