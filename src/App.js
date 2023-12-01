@@ -7,6 +7,7 @@ function App() {
     const rot = window.document.documentElement;
     rot.classList.add("dark");
   }, []);
+  console.log('INITIAL APP');
   return (
     <div className="w-full h-full dark:bg-gray-900 dark:text-white font-body bg-gray-300 text-gray-800">
     <h1>Hello world</h1>
