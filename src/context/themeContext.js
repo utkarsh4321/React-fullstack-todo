@@ -24,7 +24,7 @@ export const ThemeProvider = ({ initialState, children }) => {
     const isDark = currentTheme === "dark";
     root.classList.remove(isDark ? "light" : "dark");
     root.classList.add(currentTheme);
-
+    console.log('Testing');
     localStorage.theme = currentTheme;
   };
   // if (initialState) {
