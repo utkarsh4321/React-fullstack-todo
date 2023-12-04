@@ -12,6 +12,7 @@ const Navbar = () => {
       setTheme("dark");
     }
   };
+  console.log('this is navbar');
   return (
     <header className="flex-shrink-0">
       <div className="p-5 flex justify-between align-center">
