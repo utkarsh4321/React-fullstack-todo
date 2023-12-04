@@ -8,6 +8,7 @@ import Signup from "../components/Signup";
 import Todo from "../components/Todo";
 
 export default function Main() {
+  console.log('This is main file');
   return (
     <BrowserRouter>
       <div className="flex flex-col h-screen">
