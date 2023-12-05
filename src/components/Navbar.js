@@ -4,7 +4,7 @@ import { ThemeContext } from "../context/themeContext";
 
 const Navbar = () => {
   const { theme, setTheme } = useContext(ThemeContext);
-  console.log(theme, "afs");
+  console.log(theme, "afsss");
   const onClickedHandler = () => {
     if (theme === "dark") {
       setTheme("light");
